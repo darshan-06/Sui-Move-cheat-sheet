@@ -18,7 +18,7 @@ module example::MyModule {
 
 ### Struct Definition
 ```move
-struct MyStruct has key, store {
+public struct MyStruct has key, store {
     field1: u64,
     field2: address,
 }
