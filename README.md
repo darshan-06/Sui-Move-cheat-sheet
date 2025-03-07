@@ -2,6 +2,9 @@
 
 This document provides a complete cheat sheet for Sui Move, including modules, functions, events, and use case examples. Each section starts with a brief description of its content.
 
+Created with the help of AI and publically available doccuments.
+for complete doc refer - https://move-book.com/index.html and https://docs.sui.io/
+
 ---
 
 ## Basics
