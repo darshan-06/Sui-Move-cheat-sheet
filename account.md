@@ -111,7 +111,7 @@ In Move, there is no built-in function like `delete_account` because the Move la
 
 However, here are some key things to consider about account deletion and removal:
 
-## i. **Accounts Are Immutable**
+#### i. **Accounts Are Immutable**
 Once an account is created, its address and structure are immutable. The blockchain does not allow for deleting the address or its identity because doing so would potentially break the consistency of the state. The account itself cannot be removed from the blockchain.
 
 ## ii. **Removing All Resources From an Account**
