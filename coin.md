@@ -27,10 +27,13 @@ public fun transfer(sender: &mut Signer, recipient: address, coin: Coin) {
 }
 ```
 
+coin::transfer would be used in a more specific context when you are working with a custom coin module that handles the details of coin transfer or if you’re working within a specialized coin contract. For most cases, especially when using the default Sui coin module or transferring basic objects, sui::transfer is the go-to function.
+
 #### Explanation:
 - **`transfer`** takes a coin and transfers it from the `sender` to the `recipient`.
 - The function requires a mutable reference to the sender (`&mut Signer`), the recipient's address, and the coin being transferred.
 - After calling this function, the balance of the sender decreases, and the balance of the recipient increases by the coin amount.
+
 
 ### 3. **`split`**
 This method splits a coin into two parts, returning two new coins.
