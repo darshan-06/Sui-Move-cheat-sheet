@@ -114,7 +114,7 @@ However, here are some key things to consider about account deletion and removal
 #### i. **Accounts Are Immutable**
 Once an account is created, its address and structure are immutable. The blockchain does not allow for deleting the address or its identity because doing so would potentially break the consistency of the state. The account itself cannot be removed from the blockchain.
 
-## ii. **Removing All Resources From an Account**
+#### ii. **Removing All Resources From an Account**
 While you can't delete an account, you can effectively "empty" it by transferring or deleting all the resources it holds (tokens, NFTs, etc.). 
 
 To "remove" everything from an account, you'd typically:
@@ -140,7 +140,7 @@ public fun transfer_tokens_to_account(
 }
 ```
 
-## iii. **Dropping Resources (Deleting Resources)**
+#### iii. **Dropping Resources (Deleting Resources)**
 
 If you want to "clean up" the account in the sense of removing resources, you can use `drop` to remove resources from the account. However, this only works for resources held in the account and not the account itself.
 
@@ -156,7 +156,7 @@ public fun drop_token(account: &mut signer) {
 }
 ```
 
-## iv. **Account Deactivation (Indirect)**
+#### iv. **Account Deactivation (Indirect)**
 In some cases, you may want to deactivate an account, especially if it's part of a contract that can be disabled or made inactive. This could involve locking or restricting the ability of the account to perform certain actions, but again, the account itself can't be "deleted."
 
 For instance, you might set a flag on the account that prevents further interaction:
