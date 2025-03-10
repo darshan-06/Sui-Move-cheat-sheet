@@ -19,8 +19,8 @@ public fun transfer<S: store>(recipient: address, object: &mut S::object)
 
 ```rust
 public fun transfer_example() {
-    let sender = Address::from_hex("0x1").unwrap();
-    let receiver = Address::from_hex("0x2").unwrap();
+    let sender = Address::from_hex_literal("0x1").unwrap();
+    let receiver = Address::from_hex_literal("0x2").unwrap();
 
     // Assuming `coin` is some object that can be transferred
     let coin = Coin::new(100);
@@ -51,7 +51,7 @@ public fun split<S: store>(amount: u64, object: &mut S::object)
 
 ```rust
 public fun split_example() {
-    let sender = Address::from_hex("0x1").unwrap();
+    let sender = Address::from_hex_literal("0x1").unwrap();
     let coin = Coin::new(100);
     
     // Split the coin into two portions
@@ -80,7 +80,7 @@ public fun merge<S: store>(object1: &mut S::object, object2: &mut S::object)
 
 ```rust
 public fun merge_example() {
-    let sender = Address::from_hex("0x1").unwrap();
+    let sender = Address::from_hex_literal("0x1").unwrap();
     
     let coin1 = Coin::new(50);
     let coin2 = Coin::new(50);
@@ -111,7 +111,7 @@ public fun get_balance(account: address, object_type: Type)
 
 ```rust
 public fun get_balance_example() {
-    let account = Address::from_hex("0x1").unwrap();
+    let account = Address::from_hex_literal("0x1").unwrap();
     
     // Get the balance of coins in the account
     let balance = sui::transfer::get_balance(account, Coin::type_of());
@@ -142,7 +142,7 @@ public fun check_balance(account: address, amount: u64, object_type: Type)
 
 ```rust
 public fun check_balance_example() {
-    let account = Address::from_hex("0x1").unwrap();
+    let account = Address::from_hex_literal("0x1").unwrap();
     
     // Check if the account has at least 50 coins
     let has_sufficient_balance = sui::transfer::check_balance(account, 50, Coin::type_of());
