@@ -34,6 +34,8 @@ public fun transfer_example() {
 
 In this example, we create two addresses: the sender (`0x1`) and the receiver (`0x2`). We also create an object (`coin`) representing some transferable asset. The transfer function moves the object (the coin) from the sender to the receiver.
 
+.unwrap(): This will panic if the conversion fails. It's often used in examples for simplicity, but in production, you should handle errors gracefully (e.g., using match or Result).
+
 ### 2. `sui::transfer::split`
 
 The `split` function allows splitting a transfer object (like a coin) into two parts, usually used to divide assets into smaller portions.
